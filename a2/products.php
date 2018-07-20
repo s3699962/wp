@@ -44,10 +44,9 @@
 
 <!-- Main section of the webpage, broken up into 2 main columns -->
 <div class="row">
-  <!-- first column inlcudes the filter field for the products. Currently it is a placeholder and does not function. -->
+  <!-- first column includes the filter field for the products. Currently it is a placeholder and does not function. -->
   <div class="col-3 filterColumn">
     <h3 class="panelTitle">FILTER</h3>
-
     <div class="panelContent">
       <h2 class="filterListHeading">By Size</h2>
       <ul class="filterList">
@@ -87,7 +86,6 @@
         heels. Whether you prefer to wear low, mid or high heels or wedges, you will find that perfect pair that will give you the ideal lift you’re after.
       </p>
       <!-- List of products with title, image and price. NOTE: all products links to products.php -->
-
       <div class="col-4 productItem">
         <a href="product.php">
           <img src="images/prod1.jpg">
@@ -134,8 +132,6 @@
   </div>
 </div>
 </div>
-</div>
-
 
 <footer>
   <div>&copy;<script>

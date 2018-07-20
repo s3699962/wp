@@ -1,9 +1,10 @@
-
+/* Styles for the right column overriding styles from the style.css */
 #productPage .rightColumn {
     border: none;
     padding: 20px 20px 70px 20px;
     margin: 0;
 }
+
 
 #productPage .filterColumn {
     border: 1px solid #66cacf;

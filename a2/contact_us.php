@@ -26,9 +26,8 @@
   <div>
     <a href="login.php"><span class="button">LOGIN</span></a>
   </div>
-
 </div>
-
+<!-- navigation bar with class=active for the products.php page. NOTE: line item "heels" links to products.php. Other links are just extra pages I created. -->
 <nav>
   <ul class="navList">
     <li class="navItems home"><a href="index.php">HOME</a></li>
@@ -39,8 +38,9 @@
     <li class="navItems contactUs"><a class="active" href="contact_us.php">CONTACT US</a></li>
   </ul>
 </nav>
-
+<!-- Main section of the webpage, broken up into 3 columns -->
 <main>
+  <!-- left column on the webpage, including contact details options.  -->
   <div class="leftColumn">
     <h3 class="panelTitle">CONTACT DETAILS</h3>
 
@@ -51,6 +51,7 @@
       <p>hello@shoestack.com.au</p>
     </div>
   </div>
+  <!-- middle column on the webpage, including the login in form. NOTE: does not actually work or submit.-->
   <div class="middleColumn">
     <form class="loginForm" name="contactUsForm">
       <h2>CONTACT US</h2>
@@ -71,6 +72,7 @@
     </form>
 
   </div>
+  <!-- Smaller right hand side column including sections for subscribing by email and social media links (currently just images). NOTE: these links are not active. -->
   <div class="rightColumn">
     <h3 class="panelTitle">SOCIAL</h3>
 

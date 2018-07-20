@@ -1,16 +1,14 @@
 /* Insert your styles here */
 body {
-
     margin: 50px;
 }
 
 main {
     min-height: 700px;
 }
-
+/* Styles for the top header including the logo and business name */
 .topHeader {
     display: inline-flex;
-
 }
 
 .logoImage {
@@ -18,6 +16,7 @@ main {
     padding-bottom: 30px;
 }
 
+/* styles for button */
 .button {
     display: block;
     position: absolute;
@@ -42,8 +41,9 @@ main {
     display: block;
     text-decoration: none;
     color: white;
-
 }
+
+/* Styles for the navigation bar */
 
 .navList {
     list-style-type: none;
@@ -57,7 +57,6 @@ main {
 
 .navItems {
     float: left;
-
 }
 
 .navItems a {
@@ -75,15 +74,20 @@ main {
 .navItems a:active {
     background-color: #cecece;
 }
+
 .navItems .active{
     color: #00A7B0;
 }
+
+/* Styles for the left column items */
 
 .leftColumn {
     float: left;
     width: 70%;
     padding-right: 20px;
 }
+
+/* Styles for the right column items */
 
 .rightColumn {
     float: right;
@@ -93,6 +97,8 @@ main {
     border: 1px solid #66cacf;
     text-align: center;
 }
+
+/* Styles for the new season section on the home page */
 
 #newThisSeason {
     padding-left: 25px;
@@ -105,6 +111,7 @@ main {
     text-align: center;
     color: #666666;
 }
+
 #newThisSeason a{
     color: #666666;
 }
@@ -124,8 +131,9 @@ div.gallery img {
     width: 100%;
     height: 100%;
     border: 1px solid #66cacf
-
 }
+
+/* Styles for the about us section */
 
 #aboutUs {
     display: inline-block;
@@ -141,7 +149,6 @@ div.gallery img {
     font-weight: bolder;
     color: #666666;
     padding: 15px;
-
 }
 
 #aboutUsText {
@@ -156,6 +163,7 @@ div.gallery img {
     height: 100%;
 }
 
+/* Styles for the right column sections */
 .panelTitle {
     padding: 10px 0;
     background-color: #00A7B0;
@@ -174,6 +182,8 @@ div.gallery img {
     color: #666666;
     padding: 10px 15px 20px 15px;
 }
+
+/* Styles for icons */
 
 .iconsImage {
     display: inline;
@@ -201,7 +211,6 @@ div.gallery img {
     font-family: 'Raleway', sans-serif;
     outline: none;
     text-indent: 10px;
-
 }
 
 #register a {
@@ -213,6 +222,7 @@ div.gallery img {
     color: #666666;
 }
 
+/* Styles for the Login form */
 .loginForm {
     padding-left: 25px;
     padding-right: 25px;
@@ -224,11 +234,13 @@ div.gallery img {
     color: #00A7B0;
     font-weight: bolder;
 }
+
 .loginForm h2 {
     text-align: center;
     font-size:150%;
 }
 
+/* Styles for the submit button on the login form */
 .submitButton {
     display: block;
     width: 25%;
@@ -255,6 +267,8 @@ a {
     color: white;
 }
 
+/* Styles for the input fields in the login form */
+
 .loginFormBox {
     background-color: #E5E5E5;
     width: 100%;
@@ -264,6 +278,8 @@ a {
     outline: none;
     text-indent: 10px;
 }
+
+/* Styles for the columns */
 
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
@@ -282,6 +298,8 @@ a {
     float: left;
     box-sizing: border-box;
 }
+
+/* Styles for the filter section on the products page */
 .filterColumn{
     margin: 50px 0;
 }
@@ -292,6 +310,7 @@ a {
     display: table;
 }
 
+/* Styles for the error message after validating form */
 .errorMessage {
     font-family: 'Nanum Myeongjo', serif;
     opacity: 0;
@@ -302,6 +321,7 @@ a {
     opacity: 1;
 }
 
+/* Styles for the footer sections */
 footer{
     display:block;
     background-color: #ccedef;

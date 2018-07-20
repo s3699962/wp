@@ -1,4 +1,4 @@
-
+/* Styles for the left column on the contact us page overriding the styles in style.css */
 #contactPage .leftColumn {
     float: left;
     width: 20%;
@@ -9,6 +9,8 @@
     padding-right: 0;
 }
 
+/* Styles for the additional middle column on the contact_us.php */
+
 .middleColumn {
     float: left;
     width: 49%;
@@ -16,6 +18,8 @@
     margin-right: 15px;
     margin-bottom: 50px;
 }
+
+/* Styles for the contact us page panel content */
 
 #contactPage .panelContent h3{
      font-family: 'Nanum Myeongjo', serif;

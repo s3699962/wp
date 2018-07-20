@@ -14,6 +14,7 @@
 </head>
 
 <body id="productPage">
+<!-- Header section including logo, brand name, and login button -->
 <div class="topHeader">
   <header>
     <div class="logo">
@@ -26,7 +27,7 @@
   </div>
 
 </div>
-
+<!-- navigation bar with class=active for the flats.php page. NOTE: line item "heels" links to products.php. Other links are just extra pages I created. -->
 <nav>
   <ul class="navList">
     <li class="navItems home"><a href="index.php">HOME</a></li>
@@ -37,11 +38,11 @@
     <li class="navItems contactUs"><a href="contact_us.php">CONTACT US</a></li>
   </ul>
 </nav>
-
+<!-- Main section of the webpage, broken up into 2 main columns -->
 <div class="row">
+  <!-- first column includes the filter field for the products. Currently it is a placeholder and does not function. -->
   <div class="col-3 filterColumn">
     <h3 class="panelTitle">FILTER</h3>
-
     <div class="panelContent">
       <h2 class="filterListHeading">By Size</h2>
       <ul class="filterList">
@@ -74,13 +75,14 @@
       </ul>
     </div>
   </div>
+  <!-- The right section is further split into 3 columns to display the products in a grid. -->
   <div class="col-9 rightColumn">
     <div id="productList">
       <h3>Flats</h3>
       <p>The versatility is endless with flats! Flats are great candidates for day wear, with ballet flats being the standout favourite. Comfortable and chic,
         our extensive range includes classic ballet flats, on-trend loafers or statement lace ups.
       </p>
-
+      <!-- List of products with title, image and price. NOTE: all products links to products.php -->
       <div class="col-4 productItem">
         <a href="product.php">
           <img src="images/flat1.jpg">
@@ -128,7 +130,6 @@
 </div>
 </div>
 </div>
-
 
 <footer>
   <div>&copy;<script>

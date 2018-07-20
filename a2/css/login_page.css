@@ -1,4 +1,4 @@
-
+/* Styles for the left column on the login page overriding styles from style.css */
 #loginPage .leftColumn {
     float: left;
     width: 20%;
@@ -9,6 +9,7 @@
     padding-right: 0;
 }
 
+/* Styles for the additional middle column on login page */
 .middleColumn {
     float: left;
     width: 49%;

@@ -31,6 +31,7 @@
     }
 
   }
+
   // function to increase the quantity by 1 when the + button is clicked.
   function addQuantity(event) {
     event.preventDefault();
@@ -42,6 +43,7 @@
     var newValString = newVal.toString();
     document.getElementsByName("qty")[0].value = newValString;
   }
+
   // function to decrease the quantity by 1 when the + button is clicked.
   function minusQuantity(event) {
     event.preventDefault();
@@ -56,6 +58,7 @@
     document.getElementsByName("qty")[0].value = newValString;
 
   }
+
   // function to validate the input for quantity so that only positive integers can be added.
   function inputValidate() {
     var quantityString = document.forms["cartForm"]["qty"].value;
