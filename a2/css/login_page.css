@@ -1,0 +1,22 @@
+
+#loginPage .leftColumn {
+    float: left;
+    width: 20%;
+    display: inline-block;
+    margin-top: 50px;
+    margin-right:18px;
+    border: 1px solid #66cacf;
+    padding-right: 0;
+}
+
+.middleColumn {
+    float: left;
+    width: 49%;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.loginOption:hover{
+    color: #00A7B0;
+    cursor: pointer;
+}

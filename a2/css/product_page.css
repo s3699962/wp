@@ -1,0 +1,150 @@
+
+#productPage .rightColumn {
+    border: none;
+    padding: 20px 20px 70px 20px;
+    margin: 0;
+}
+
+#productPage .filterColumn {
+    border: 1px solid #66cacf;
+    padding: 0 0 10px 0;
+}
+
+/* product grid styles */
+
+#productList h3 {
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: bolder;
+    text-align: center;
+    color: #00A7B0;
+    font-size: 200%;
+    text-decoration-line: underline;
+}
+
+#productList p {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    color: #666666;
+    text-align: center;
+    padding-bottom:10px;
+    font-size: 90%;
+    line-height: 1.5;
+}
+
+.productHeading {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    color: #666666;
+    text-align: left;
+    padding: 0 5px;
+}
+
+.productPrice {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    font-size: 120%;
+    color: #666666;
+    text-align: left;
+    padding: 0 5px;
+}
+
+/* filter styles */
+
+.filterListHeading {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    color: #666666;
+    text-align: left;
+    padding: 0 5px;
+    text-indent: 7px
+
+}
+
+.filterList {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    color: #666666;
+    text-align: left;
+    padding: 0 5px;
+    font-size: 20px;
+    list-style: none;
+    clear: both;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.filterList li {
+    width: 45px;
+    height: 45px;
+    margin: 5px 10px 0 0;
+    background-color: lightgrey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.filterList li:hover {
+    background-color: darkgrey;
+}
+
+.filterList li.red {
+    background-color: red;
+}
+
+.filterList li.blue {
+    background-color: blue;
+}
+
+.filterList li.green {
+    background-color: green;
+}
+
+.filterList li.black {
+    background-color: black;
+}
+
+.filterList li.purple {
+    background-color: purple;
+}
+
+.filterList li.grey {
+    background-color: grey;
+}
+
+.filterList li.pink {
+    background-color: pink;
+}
+
+.filterList li.white {
+    background-color: white;
+    outline: 1px solid lightgrey;
+}
+
+.filterList li.yellow {
+    background-color: yellow;
+}
+
+.filterList li.orange {
+    background-color: orange;
+}
+
+.filterList li.lessBright:hover {
+    filter: brightness(50%);
+}
+
+.filterList li.black:hover {
+    background-color: darkgrey;
+}
+
+.productItem a {
+    display: block;
+    padding: 20px;
+}
+
+.productItem a:hover {
+    outline: 1px solid #66cacf;
+}
+
