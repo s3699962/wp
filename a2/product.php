@@ -2,7 +2,7 @@
 <html lang='en'>
 <head>
   <meta charset="utf-8">
-  <title>Assignment 2</title>
+  <title>Single Product</title>
 
   <!-- Keep wireframe.css for debugging, add your css to style.css -->
   <link type="text/css" rel="stylesheet" href="css/single_product_page.css">
