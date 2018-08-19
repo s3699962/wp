@@ -1,1 +1,383 @@
 /* Insert your styles here */
+body {
+    margin: 50px;
+}
+
+main {
+    min-height: 700px;
+}
+
+/* Styles for the top header including the logo and business name */
+.topHeader {
+    display: inline-flex;
+}
+
+.logoImage {
+    width: 300px;
+    padding-bottom: 30px;
+}
+
+/* styles for button */
+.button {
+    display: block;
+    position: absolute;
+    right: 40px;
+    margin: 10px;
+    padding: 12px 40px;
+    text-align: center;
+    background-color: #00A7B0;
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: bolder;
+    font-size: 100%;
+    color: white;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+.button:hover {
+    background-color: #66cacf;
+}
+
+.button a {
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
+/* Styles for the navigation bar */
+
+.navList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #E5E5E5;
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: bolder;
+}
+
+.navItems {
+    float: left;
+}
+
+.navItems a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 25px;
+    text-decoration: none;
+}
+
+.navItems a:hover {
+    color: #00A7B0;
+}
+
+.navItems a:active {
+    background-color: #cecece;
+}
+
+.navItems .active {
+    color: #00A7B0;
+}
+
+/* Styles for the left column items */
+
+.leftColumn {
+    float: left;
+    width: 70%;
+    padding-right: 20px;
+}
+
+/* Styles for the right column items */
+
+.rightColumn {
+    float: right;
+    display: inline-block;
+    width: 28%;
+    margin-top: 50px;
+    border: 1px solid #66cacf;
+    text-align: center;
+}
+
+/* Styles for the new season section on the home page */
+
+#newThisSeason {
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-top: 50px;
+    background-color: #b2e4e7;
+    border: 1px solid #66cacf;
+    font-family: 'Allura', cursive;
+    font-size: 400%;
+    text-align: center;
+    color: #666666;
+}
+
+#newThisSeason a {
+    color: #666666;
+}
+
+div.gallery {
+    background-color: #b2e4e7;
+    margin: 10px;
+    width: 250px;
+    display: flex;
+    text-align: center;
+}
+
+div.gallery img {
+    padding: 5px;
+    margin: 10px;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #66cacf
+}
+
+/* Styles for the about us section */
+
+#aboutUs {
+    display: inline-block;
+    margin: 50px 0;
+    border: 1px solid #66cacf;
+    text-align: left;
+    font-size: 100%;
+}
+
+.aboutPanelContent {
+    display: flex;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    color: #666666;
+    padding: 15px;
+}
+
+#aboutUsText {
+    padding: 80px 20px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+#aboutUsImage {
+    display: inline;
+    width: 30%;
+    height: 100%;
+}
+
+/* Styles for the right column sections */
+.panelTitle {
+    padding: 10px 0;
+    background-color: #00A7B0;
+    margin: 0;
+    color: #fff;
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: bolder;
+    font-size: 14px;
+    text-align: center;
+}
+
+.panelContent {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    font-size: 70%;
+    color: #666666;
+    padding: 10px 15px 20px 15px;
+}
+
+/* Styles for icons */
+
+.iconsImage {
+    display: inline;
+    width: 35px;
+    height: 35px;
+    padding: 10px 5px;
+}
+
+.iconsImage:hover {
+    filter: grayscale(80%);
+    cursor: pointer;
+}
+
+.iconsImage.nonInteractable:hover {
+    cursor: default;
+    filter: none;
+}
+
+.inputFormBox {
+    background-color: #E5E5E5;
+    width: 100%;
+    padding: 8px 2px;
+    border: 0px solid;
+    font-size: 120%;
+    font-family: 'Raleway', sans-serif;
+    outline: none;
+    text-indent: 10px;
+}
+
+#register a {
+    text-decoration: none;
+    color: #00A7B0;
+}
+
+#register a:hover {
+    color: #666666;
+}
+
+/* Styles for the Login form */
+.loginForm {
+    padding-left: 25px;
+    padding-right: 25px;
+    margin: 50px 0;
+    background-color: #b2e4e7;
+    border: 1px solid #66cacf;
+    font-family: 'Nanum Myeongjo', serif;
+    text-align: left;
+    color: #00A7B0;
+    font-weight: bolder;
+}
+
+.loginForm h2 {
+    text-align: center;
+    font-size: 150%;
+}
+
+/* Styles for the submit button on the login form */
+.submitButton {
+    display: block;
+    width: 25%;
+    margin: 15px 0;
+    padding: 12px 40px;
+    text-align: center;
+    background-color: #00A7B0;
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: bolder;
+    font-size: 100%;
+    color: white;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+}
+
+.submitButton:hover {
+    background-color: #66cacf;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Styles for the input fields in the login form */
+
+.loginFormBox {
+    background-color: #E5E5E5;
+    width: 100%;
+    padding: 8px 2px;
+    border: 0px solid;
+    font-family: 'Raleway', sans-serif;
+    outline: none;
+    text-indent: 10px;
+}
+
+/* Styles for the columns */
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+[class*="col-"] {
+    float: left;
+    box-sizing: border-box;
+}
+
+/* Styles for the filter section on the products page */
+.filterColumn {
+    margin: 50px 0;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Styles for the error message after validating form */
+.errorMessage {
+    font-family: 'Nanum Myeongjo', serif;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.errorMessage.displayed {
+    opacity: 1;
+}
+
+/* Styles for the footer sections */
+footer {
+    display: block;
+    background-color: #ccedef;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    font-size: 80%;
+    color: #666666;
+    clear: both;
+    line-height: 1.5;
+}
+
+.checkoutError{
+    font-family: 'Nanum Myeongjo', serif;
+    text-align: left;
+    color: darkred;
+    font-weight: bolder;
+}
+
+
+
+
+
+

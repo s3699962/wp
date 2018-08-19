@@ -1,0 +1,30 @@
+#checkoutPage .loginForm {
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+.visaImg {
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s;
+}
+.visaImg.displayed{
+    opacity: 1;
+}
+
+.creditHeading {
+    display: inline-block;
+}
+
+.visa {
+    display: inline-block;
+    vertical-align: middle;
+    height: 29px;
+    float: right;
+}
+
+#checkoutPage .loginFormBox.creditCard {
+    display: inline-block;
+    width: 86%;
+    vertical-align: middle;
+}
