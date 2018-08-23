@@ -67,6 +67,7 @@ function updatePrice() {
     document.getElementsByName("price") [0].value = priceString;
 }
 
+//function to check whether the credit card number entered is a visa and displays the visa logo
 function checkVisa(){
   var creditCardString = document.forms["checkoutForm"]["creditCard"].value;
   var re = new RegExp("^(4(\\s{0,1}\\d){12,15})$");

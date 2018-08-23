@@ -2,10 +2,12 @@
 session_start();
 require_once('tools.php');
 
+//check to see if $_SESSION errors is already set. If it is then unset before the checkoutform is validated.
 if (isset ($_SESSION['errors'])) {
     unset ($_SESSION['errors']);
 }
 
+// values from the checkout form are validated and if there are erros $_SESSION[errors] is set.
 $error = false;
 if (isset($_POST['fName'], $_POST['lName'], $_POST['phone'], $_POST['email'], $_POST['creditCard'], $_POST['expDate'], $_POST['address'])) {
     $fName = $_POST['fName'];
@@ -16,26 +18,31 @@ if (isset($_POST['fName'], $_POST['lName'], $_POST['phone'], $_POST['email'], $_
     $expDate = $_POST['expDate'];
     $address = $_POST['address'];
 
+    // check if first name is valid
     if (!preg_match("/[A-Za-z .,'-]$/", $fName)) {
         $error = true;
         $_SESSION['errors']['firstName'] = $fName;
     }
 
+    //check if last name is valid
     if (!preg_match("/[A-Za-z \-.,']$/", $lName)) {
         $error = true;
         $_SESSION['errors']['lastName'] = $lName;
     }
 
+    // check if phone number is valid
     if (!preg_match("/^((\+614)|(04)|(\(04\)))(\s{0,1}\d){8}$/", $phone)) {
         $error = true;
         $_SESSION['errors']['phone'] = $phone;
     }
 
+    //check if credit card number is valid
     if (!preg_match("/^(\s{0,1}\d){12,19}$/", $creditCard)) {
         $error = true;
         $_SESSION['errors']['creditCard'] = $creditCard;
     }
 
+    //check if expiry date is valid and not within 2 months of current date
     if (preg_match("/^(\d{4}\-\d{2}\-\d{2})$/", $expDate)) {
         $month = explode("-", $expDate)[1];
         $year = explode("-", $expDate)[0];
@@ -56,15 +63,21 @@ if (isset($_POST['fName'], $_POST['lName'], $_POST['phone'], $_POST['email'], $_
         $error = true;
         $_SESSION['errors']['expDate'] = $expDate;
     }
+
+    //check if address is valid
     if (!preg_match("/[0-9A-Za-z \-.,'\/\n]$/", $address)) {
         $error = true;
         $_SESSION['errors']['address'] = $address;
     }
+
+    //check if email is valid
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $error = true;
         $_SESSION['errors']['email'] = $email;
     }
 }
+
+//if there are errors present in checkout form, return to the checkout page.
 if ($error == true) {
     header("Location: checkout.php");
 }
@@ -80,7 +93,9 @@ echo <<<OUTPUT
 
 <div class="receiptPage">
   <div class="logo">
-    <img src="images/logo_and_Name.png" class="logoImage">
+    <a href="index.php">
+      <img src="images/logo_and_Name.png" class="logoImage">
+    </a>
   </div>
   <div class="thanks">
     <h3>THANKS FOR SHOPPING WITH US</h3>
@@ -93,10 +108,12 @@ echo <<<OUTPUT
     <h4>ITEMS YOU ORDERED</h4>
   </div>
 OUTPUT;
+
+// calling the get_products function to get all products
 $products = get_products();
 $cartTotal = 0;
-//if (isset ($_POST['id'], $_POST['qty'], $_POST['oid'])) {
 
+// loop through all the products in cart to display them on the receipt
 foreach ($_SESSION['cart'] as $key => $cartOptions) {
     foreach ($cartOptions as $size => $quantity) {
         $options = get_product_with_id($products, $key);
@@ -109,8 +126,8 @@ foreach ($_SESSION['cart'] as $key => $cartOptions) {
 
         $cartTotal = ($cartTotal + $productTotal);
         $orderTotal = number_format((float)$cartTotal, 2, '.', '');
-//    echo "$_SESSION[cart][$key]";
         echo <<<"OUTPUT"
+        <!--displaying the products that have been pruchased-->
   <div class="productList">
   <div class ="descSection">
     <h3 class="title">DESCRIPTION</h3>
@@ -134,6 +151,7 @@ OUTPUT;
 }
 $today = date("d/m/Y");
 
+//display the customer's details on the receipt
 echo <<<"OUTPUT"
   <div class="orderTotal">
       <h3>ORDER TOTAL: $$orderTotal</h3>
@@ -180,6 +198,7 @@ echo <<<"OUTPUT"
        </div>
     </div>
   </div>
+  <!--display customer service contact details on the receipt-->
   <div class="custService">
   <h3>Customer Service:</h3>
     <div class="custTitle">
@@ -196,10 +215,34 @@ echo <<<"OUTPUT"
     </div>
   </div>
 </div>
+</div>
+
+<!-- display a continue shopping button so the customer can return to the website-->
+<div class="continueShopping">
+   <a href="index.php"><span class="continueShoppingButton">CONTINUE SHOPPING</span></a>
+</div>
+
 OUTPUT;
 echo "</div>";
 
+// add all the purchases to orders.txt
+if (!isset ($_SESSION['errors'])) {
 
-
+    $addressTrim = str_replace("\r\n", " ", $address);
+    $fp = fopen('orders.txt', "a");
+    flock($fp, LOCK_SH);
+    foreach ($_SESSION['cart'] as $key => $cartOptions) {
+        foreach ($cartOptions as $size => $quantity) {
+            $options = get_product_with_id($products, $key);
+            $cartProduct = get_product_options_from_product_with_id($options, $size);
+            $price = "$cartProduct[Price]";
+            $productTotal = number_format((float)($price * $quantity), 2, '.', '');
+            $order = "$today	$fName $lName	$addressTrim	$phone	$email	$key	$size	$quantity	$price	$productTotal";
+            fwrite($fp, $order . "\n");
+        }
+    }
+    flock($fp, LOCK_UN);
+    fclose($fp);
+}
 end_module();
 

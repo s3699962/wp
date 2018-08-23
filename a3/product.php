@@ -1,4 +1,5 @@
 <?php
+//function to show a single product when the ID is set.
 function product_module($id, $productOptions)
 {
     $product = (reset($productOptions));

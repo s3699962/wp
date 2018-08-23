@@ -2,6 +2,8 @@
 session_start();
 require_once('tools.php');
 top_module("Shoe Stack: Checkout", "checkoutPage");
+
+// display a checkout form that asks for customer details and credit card information. After Validating the information, if there are errors they appear under the inout field.
 echo <<<OUTPUT
 <script type="text/javascript" rel="javascript" src="products.js"></script>
 <link type="text/css" rel="stylesheet" href="css/checkout_page.css">

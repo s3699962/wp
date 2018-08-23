@@ -1,4 +1,6 @@
 
+/*styles for the receipt page*/
+
 .receiptPage {
     border: 4px solid black;
     padding-left: 30px;
@@ -6,7 +8,7 @@
     padding-bottom: 30px;
     max-width: 650px;
     margin: 0 auto;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .logo img {
@@ -153,6 +155,36 @@
     margin-top: 10px;
     margin-bottom: 10px;
 
+}
+
+.continueShopping {
+    max-width: 718px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+.continueShoppingButton {
+    display: block;
+    right: 40px;
+    padding: 12px 40px;
+    text-align: center;
+    background-color: #00A7B0;
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: bolder;
+    font-size: 100%;
+    color: white;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+.continueShoppingButton:hover {
+    background-color: #66cacf;
+}
+
+.continueShoppingButton a {
+    display: block;
+    text-decoration: none;
+    color: white;
 }
 
 @media print {
@@ -306,7 +338,6 @@
         margin-bottom: 10px;
     }
 
-
     .custValue h5 {
         margin-top: 10px;
         margin-bottom: 10px;
@@ -318,4 +349,6 @@
     }
 
 }
+
+
 

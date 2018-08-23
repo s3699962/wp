@@ -1,4 +1,5 @@
 <?php
+// function that displays multiple products (heels) if ID is not set.
 function multi_product_module($products)
 {
     top_module("Shoe Stack: Products", "productPage");
@@ -49,7 +50,7 @@ function multi_product_module($products)
           heels. Whether you prefer to wear low, mid or high heels or wedges, you will find that perfect pair that will give you the ideal lift you’re after.
         </p>  
 OUTPUT;
-//    displaying all the products in a grid.
+//    displaying all the products (heels) in a grid.
     foreach ($products as $key => $productOptions) {
         $product = (reset($productOptions));
         echo "<div class='col-4 productItem'>";

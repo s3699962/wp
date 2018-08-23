@@ -12,15 +12,18 @@ if (isset ($_POST['add'], $_POST['id'], $_POST['qty'], $_POST['oid'])) {
     $id = $_POST['id'];
     $oid = $_POST['oid'];
     $product = get_product_with_id($products, $id);
+    // if the product id is invalid, error message is displayed
     if ($product == null) {
         echo "<h3 class='errorMessage displayed'>This Product is No Longer Available</h3>";
         return;
     }
-
+    //if the oid is not valid, error message is displayed
     if (!isset ($product["options"][$oid])) {
         echo "<h3 class= 'errorMessage displayed'>This Size is No Longer Available</h3>";
         return;
     }
+
+    // if quantity is not a positive integer, error message displayed.
     $qty = (int)$_POST['qty'];
     if ($qty <= 0) {
         echo "<h3 class='errorMessage displayed'>Please Enter a Valid Quantity</h3>";
@@ -28,13 +31,12 @@ if (isset ($_POST['add'], $_POST['id'], $_POST['qty'], $_POST['oid'])) {
     }
 
     $_SESSION['cart'][$id][$oid] = $qty;
-//    $_SESSION['cart'][$id]['qty'] = $qty;
 
     echo "<div id='productList'>";
     echo "<h3>My Cart</h3>";
     echo "</div>";
 
-
+    // loop through all the products in cart and display them on the cart page.
     $cartTotal = 0;
     foreach ($_SESSION['cart'] as $key => $cartOptions) {
         foreach ($cartOptions as $size => $quantity) {
@@ -70,6 +72,7 @@ OUTPUT;
         }
     }
     echo <<<"OUTPUT"
+    <!--display the order total, cancel button and checkout button-->
 
 
     <div class="subtotal">

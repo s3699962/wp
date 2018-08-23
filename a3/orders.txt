@@ -1,1 +1,1 @@
-Date	Name	Email	Mobile	Address	PID	OID	Quantity	Unit Price	Sub Total
+Date	Name	Address	Mobile	Email	PID	OID	Quantity	Unit Price	Sub Total\n

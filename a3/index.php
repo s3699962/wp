@@ -1,20 +1,10 @@
 <?php
 session_start();
+// add tools.php and top_module
 require_once('tools.php');
 top_module("Shoe Stack", "index");
-?>
-<style>
-  //<?php
-    // This PHP code inserts CSS to style the "current page" link in the nav area
-    //$here = $_SERVER['SCRIPT_NAME'];
-    //$bits = explode('/',$here);
-    //$filename = $bits[count($bits)-1];
-    //echo "nav a[href$='$filename'] {
-    //box-shadow: 1px 1px 1px 2px navy;
-  //}";
-  //?>
 
-</style>
+echo <<<OUTPUT
 
 
 <!-- left column on the webpage, including new Season products and about us section. -->
@@ -72,5 +62,8 @@ top_module("Shoe Stack", "index");
   </div>
 </div>
 
-<?php end_module(); ?>
+OUTPUT;
+//add end module
+end_module();
+?>
 
