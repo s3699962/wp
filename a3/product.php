@@ -3,10 +3,10 @@
 function product_module($id, $productOptions)
 {
     $product = (reset($productOptions));
-    $title = $product[Title];
-    $image = $product[Large_Img];
-    $description = $product[Description];
-    $price = $product[Price];
+    $title = $product['Title'];
+    $image = $product['Large_Img'];
+    $description = $product['Description'];
+    $price = $product['Price'];
 
 
 
