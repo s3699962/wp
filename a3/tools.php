@@ -144,6 +144,7 @@ function get_product_with_id($products, $id)
 
     return null;
 }
+
 // function that returns the product details with matching oid
 function get_product_options_from_product_with_id($product, $oid)
 {
@@ -155,6 +156,7 @@ function get_product_options_from_product_with_id($product, $oid)
 
     return null;
 }
+
 // function to check whether a product id is valid
 function valid_id ($id){
     $products = get_products();

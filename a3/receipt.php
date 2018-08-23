@@ -235,10 +235,13 @@ if (!isset ($_SESSION['errors'])) {
         foreach ($cartOptions as $size => $quantity) {
             $options = get_product_with_id($products, $key);
             $cartProduct = get_product_options_from_product_with_id($options, $size);
-            $price = "$cartProduct[Price]";
-            $productTotal = number_format((float)($price * $quantity), 2, '.', '');
-            $order = "$today	$fName $lName	$addressTrim	$phone	$email	$key	$size	$quantity	$price	$productTotal";
-            fwrite($fp, $order . "\n");
+//            if the product, $id, or $oid are invalid, the files will not be written to orders.txt
+            if (($options != null) && ($cartProduct != null)) {
+                $price = "$cartProduct[Price]";
+                $productTotal = number_format((float)($price * $quantity), 2, '.', '');
+                $order = "$today	$fName $lName	$addressTrim	$phone	$email	$key	$size	$quantity	$price	$productTotal";
+                fwrite($fp, $order . "\n");
+            }
         }
     }
     flock($fp, LOCK_UN);
